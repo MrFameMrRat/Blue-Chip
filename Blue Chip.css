@@ -1,0 +1,35 @@
+h1 {
+    color: aqua;
+    font-family: Arial;
+    font-size: 50px;
+}
+h2 {
+    color: red;
+    font-family: Arial;
+    font-size: 30px;
+}
+h3 {
+    color: crimson;
+    font-family: Arial;
+    font-size: 24px;
+}
+body {
+    background-repeat: no-repeat;
+    background-size: 1550px 900px;
+    font-family: Arial;
+    font-size: 24px;
+    text-align: center;
+        }
+#man {
+    border-radius: 25px;
+    padding: 10px;
+    width: 300px;
+    height: 110px;
+    background-color: gold; 
+}
+.logo {
+    float: left;
+}
+.logo1 {
+    float: right;
+}
