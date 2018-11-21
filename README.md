@@ -24,6 +24,12 @@
 ## VOLUME
 * ปริมาณการซื้อขาย
 ปริมาณหลักทรัพย์ที่ทำการซื้อขายในตลาดหลักทรัพย์ฯ ในช่วงระยะเวลาหนึ่งๆ
+## HIGH
+* ราคาซื้อ/ขาย สูงสุดของวันนั้น
+## LOW
+* ราคาซื้อ/ขาย ต่ำสุดของวันนั้น
+## ADJUST CLOSED PRICE
+* 
 ---
 ### About Stock
 * [Investment words](https://www.set.or.th/set/education/glossary.do?language=th&country=TH#header)
