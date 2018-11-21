@@ -5,6 +5,7 @@
 #### B: Mr.Witsarut Kaewngam 61070210
 #### C: Mr.Watthanawit Mingchuea 61070205
 #### D: MR.Narawich Phattaraphan 61070099
+---
 ### รู้จักคำศัพท์ลงทุน
 ## OPENING PRICE
 * ราคาเปิด
@@ -23,4 +24,6 @@
 ## VOLUME
 * ปริมาณการซื้อขาย
 ปริมาณหลักทรัพย์ที่ทำการซื้อขายในตลาดหลักทรัพย์ฯ ในช่วงระยะเวลาหนึ่งๆ
-[Links](https://www.set.or.th/set/education/glossary.do?language=th&country=TH#header)
+---
+### About Stock
+[Investment words](https://www.set.or.th/set/education/glossary.do?language=th&country=TH#header)
