@@ -28,7 +28,7 @@
 * ราคาซื้อ/ขาย สูงสุดของวันนั้น
 ## LOW
 * ราคาซื้อ/ขาย ต่ำสุดของวันนั้น
-## ADJUST CLOSED PRICE
+## ADJUSTED CLOSE PRICE
 * 
 ---
 ### About Stock
