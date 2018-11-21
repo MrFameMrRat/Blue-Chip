@@ -26,4 +26,4 @@
 ปริมาณหลักทรัพย์ที่ทำการซื้อขายในตลาดหลักทรัพย์ฯ ในช่วงระยะเวลาหนึ่งๆ
 ---
 ### About Stock
-[Investment words](https://www.set.or.th/set/education/glossary.do?language=th&country=TH#header)
+* [Investment words](https://www.set.or.th/set/education/glossary.do?language=th&country=TH#header)
