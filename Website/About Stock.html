@@ -6,11 +6,6 @@
     <title>ABOUT STOCK</title>
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <style>
-        .mySlides {
-            display: none
-        }
-    </style>
 </head>
 
 <body>
@@ -28,16 +23,17 @@
     <div class="man"></div>
     <!-- Overview -->
     <center>
-            <!-- Header -->
+        <!-- Header -->
         <div class="w3-container">
-            <h2>จัดอันดับหุ้นที่มีคนสนใจมากที่สุดจากหุ้นตัวอย่าง
-            </h2>
+            <h2><strong>#</strong></h2>
+            <hr>
             <p>An example of using buttons to indicate how many slides there are in the slideshow, and which slide the
-                user
-                is currently viewing.</p>
+                user is currently viewing1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111<wbr>222222222222222222222222222222222
+            </p>
+
         </div>
-            <!-- Images -->
-        <div class="w3-content" style="max-width:800px">
+        <!-- Images -->
+        <div class="w3-content" style="max-width:800px">    
             <img class="mySlides" src="images/Summary.png" style="width:100%">
             <img class="mySlides" src="images/APPLE.jpg" style="width:100%">
             <img class="mySlides" src="images/GOOGLE.jpg" style="width:100%">
@@ -45,14 +41,15 @@
             <img class="mySlides" src="images/INTEL.jpg" style="width:100%">
             <img class="mySlides" src="images/MSFT.jpg" style="width:100%">
         </div>
-            <!-- Button -->
+        <!-- Button -->
         <div class="w3-center">
             <div class="w3-section">
-                <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
-                <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+                <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">
+                    < Prev</button> <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next >
+                </button>
             </div>
         </div>
-            <!-- Slide Images -->
+        <!-- Slide Images -->
         <script>
             var slideIndex = 1;
             showDivs(slideIndex);
@@ -81,8 +78,14 @@
                 dots[slideIndex - 1].className += " w3-red";
             }
         </script>
+        <div class="w3-container">
+            <h2>#</h2>
+            <p>An example of using buttons to indicate how many slides there are in the slideshow, and which slide the
+                user
+                is currently viewing.</p>
+        </div>
     </center>
-        <!-- Scroll Top -->
+    <!-- Scroll Top -->
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <script>
 
@@ -95,8 +98,6 @@
                 document.getElementById("myBtn").style.display = "none";
             }
         }
-
-
         function topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
