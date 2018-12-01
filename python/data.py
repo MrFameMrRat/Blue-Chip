@@ -6,6 +6,7 @@ import matplotlib as mpl
 import pandas as pd
 import pandas_datareader as pdr
 import datetime
+import statistics
 
 def data_collect():
     """convert all data into list"""
@@ -324,7 +325,6 @@ def part3(data):
         y_hp.append(float(data[1][j][5]))
         y_intel.append(float(data[2][j][5]))
         y_diff.append(float(data[2][j][5]) - float(data[1][j][5]))
-    
 
     ax1 = plt.gca()
     ax1.set_title("HPQ and INTC adj. close price.\nDate: 20/5/2018 - 20/11/2018. [128 days]")
@@ -339,4 +339,39 @@ def part3(data):
     ax2.legend(loc=5)
 
     plt.show()
+
+    y_diff_float = []
+    for i in y_diff:
+        y_diff_float.append(i)
+    for i in range(len(y_diff)):
+        y_diff[i] = int(y_diff[i])
+
+    x_list = np.arange(19,34)
+    y_list = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    for i in y_diff:
+        y_list[i - 19] += 1
+
+
+    plt.title("Amout of difference.")
+    plt.ylabel("Amout")
+    plt.xlabel("Difference")
+    plt.bar(x_list, y_list, color="purple", width=1)
+    plt.show()
+
+
+    mean = int(statistics.mean(y_diff))
+    std = int(statistics.pstdev(y_diff))
+    print(mean, std)
+
+    ax3 = plt.gca()
+    ax3.set_title("Adj close difference between INTC and HPQ")
+    ax3.set_ylabel("difference")
+    ax3.set_xlabel("Days [0-127]")
+    ax3.axhline(mean, linestyle="--", label="mean [24]", color="green")
+    ax3.axhline(mean + std, linestyle="--", label="std +1 [27]", color="red")
+    ax3.axhline(mean - std, linestyle="--", label="std -1 [21]", color="blue")
+    ax3.plot(x_axis, y_diff_float, color="purple", label="difference")
+    ax3.legend()
+    plt.show()
+
 main()
