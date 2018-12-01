@@ -35,7 +35,7 @@ def main():
     """main function"""
     apple, hp, intel, microsoft, google = data_collect()
     data = [apple[1:], hp[1:], intel[1:], microsoft[1:], google[1:]]
-    part1_2(data)
+    part3(data)
 
 
 def part1(data):
@@ -305,14 +305,38 @@ def part2(data):
     x = [0, 0, 0, 0, 0]
 
     for i in range(len(apple)):
-        if i != 0:
-            x[0] += int(apple[i][6])
-            x[1] += int(hp[i][6])
-            x[2] += int(intel[i][6])
-            x[3] += int(microsoft[i][6])
-            x[4] += int(google[i][6])
+        x[0] += int(apple[i][6])
+        x[1] += int(hp[i][6])
+        x[2] += int(intel[i][6])
+        x[3] += int(microsoft[i][6])
+        x[4] += int(google[i][6])
     labels = ["AAPL", "HPQ", "INTC", "MSFT", "GOOG"]
     plt.figure(figsize=[7,7])
     plt.pie(x,autopct='%d%%', counterclock=0, startangle=90, labels=labels)
 
+def part3(data):
+    """pair trade HPQ and INTC"""
+
+    x_axis = [i for i in range(len(data[0]))]
+    y_hp, y_intel = [], []
+    y_diff = []
+    for j in range(len(data[0])):
+        y_hp.append(float(data[1][j][5]))
+        y_intel.append(float(data[2][j][5]))
+        y_diff.append(float(data[2][j][5]) - float(data[1][j][5]))
+    
+
+    ax1 = plt.gca()
+    ax1.set_title("HPQ and INTC adj. close price.\nDate: 20/5/2018 - 20/11/2018. [128 days]")
+    ax1.set_ylabel("Adj. close price.(Dollar)")
+    ax1.set_xlabel("Days [0-127]")
+    ax1.plot(x_axis, y_hp, color="orange", label="HPQ")
+    ax1.plot(x_axis, y_intel, color="green", label="INTC")
+    ax1.legend(loc=0)
+    ax2 = ax1.twinx()
+    ax2.set_ylabel("Difference between INTC and HPQ.")
+    ax2.plot(x_axis, y_diff, color="black", label="difference")
+    ax2.legend(loc=5)
+
+    plt.show()
 main()
