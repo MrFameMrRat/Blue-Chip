@@ -58,6 +58,22 @@ def part1(data):
     google.plot(y='Close')
     plt.show()
 
+def bar_data_part1_2(index, data, more_previous, less_previous, high_avg, below_avg, mean):
+    """collect data for bar"""
+    present_data = 0
+    for i in data[index]:
+        if present_data <= float(i[4]):
+            more_previous[index] += 1
+        else:
+            less_previous[index] += 1
+        present_data = float(i[4])
+
+        if mean <= float(i[4]):
+            high_avg[index] += 1
+        else:
+            below_avg[index] += 1
+    return more_previous, less_previous, high_avg, below_avg
+
 def part1_2(data):
     """analysis closing average x 128 days"""
     x_axis = [i for i in range(len(data[0]))]
@@ -69,23 +85,47 @@ def part1_2(data):
         y_microsoft.append(float(data[3][j][4]))
         y_google.append(float(data[4][j][4]))
 
-
     mean1 = sum(y_apple)/128
     mean2 = sum(y_hp)/128
     mean3 = sum(y_intel)/128
     mean4 = sum(y_microsoft)/128
     mean5 = sum(y_google)/128
 
-    for i in y_hp:
-        print(i)
-    print(mean1, mean2, mean3, mean4, mean5)
+    high_avg, below_avg = [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]
+    more_previous, less_previous =[0, 0, 0, 0, 0], [0, 0, 0, 0, 0]
+
+
+    more_previous, less_previous, high_avg, below_avg = \
+    bar_data_part1_2(0, data, more_previous, less_previous, high_avg, below_avg, mean1)
+    more_previous, less_previous, high_avg, below_avg = \
+    bar_data_part1_2(1, data, more_previous, less_previous, high_avg, below_avg, mean2)
+    more_previous, less_previous, high_avg, below_avg = \
+    bar_data_part1_2(2, data, more_previous, less_previous, high_avg, below_avg, mean3)
+    more_previous, less_previous, high_avg, below_avg = \
+    bar_data_part1_2(3, data, more_previous, less_previous, high_avg, below_avg, mean4)
+    more_previous, less_previous, high_avg, below_avg = \
+    bar_data_part1_2(4, data, more_previous, less_previous, high_avg, below_avg, mean5)
+
+
+    x_list = np.arange(1,18) 
+    x_list = np.array([10, 30, 50, 70, 90])
+    plt.figure(figsize=[20,20])
+    plt.title("Compare stcok up-down and stock high-below their average.\nDate: 20/5/2018 - 20/11/2018.")
+    range_x = ["AAPL", "HPQ", "INTC", "MSFT", "GOOG"]
+    plt.ylabel("Amout (times)")
+    plt.xlabel("Sample stcok Co.")
+    plt.xticks(x_list, range_x)
+    plt.bar(x_list - 4, more_previous, color="blue", width=3, align="center", label="upper from yesterday.")
+    plt.bar(x_list - 1, less_previous, color="red", width=3, align="center", label="lower from yesterday.")
+    plt.bar(x_list + 2, high_avg, color="green", width=3, align="center", label="higher average.")
+    plt.bar(x_list + 5, below_avg, color="orange", width=3, align="center", label="belowe average.")
+    plt.legend()
 
     fig_apple = plt.figure()
     fig_hp = plt.figure()
     fig_intel = plt.figure()
     fig_microsof = plt.figure()
     fig_google = plt.figure()
-
 
     ax1 = fig_apple.gca()
     ax1.set_title("AAPL closing price.\nDate: 20/5/2018 - 20/11/2018. [128 days]")
@@ -128,6 +168,7 @@ def part1_2(data):
     ax5.legend()
 
     plt.show()
+
 
 def part2(data):
     """analysis by volume"""
@@ -275,4 +316,3 @@ def part2(data):
     plt.pie(x,autopct='%d%%', counterclock=0, startangle=90, labels=labels)
 
 main()
-
