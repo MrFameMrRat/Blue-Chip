@@ -1,4 +1,9 @@
-"""data collect"""
+"""
+PSIT Project Blue-Chip team.
+Stock analysis for 5 sample stocks.
+[AAPL, HPQ, INTC, MSFT, GOOG]
+[Apple, HP, Intel, Microsoft, Google]
+"""
 import csv
 import numpy as np
 import matplotlib.pyplot as plt
@@ -9,7 +14,7 @@ import datetime
 import statistics
 
 def data_collect():
-    """convert all data into list"""
+    """convert all data form csv file into list"""
     file = open("AAPL.csv", "r")
     data = csv.reader(file)
     apple = [row for row in data]
@@ -33,14 +38,38 @@ def data_collect():
     return apple, hp, intel, microsoft, google
 
 def main():
-    """main function"""
+    """select action [1-5] to view graphs"""
     apple, hp, intel, microsoft, google = data_collect()
     data = [apple[1:], hp[1:], intel[1:], microsoft[1:], google[1:]]
-    part3(data)
+    while True:
+        print("--------------------------| Main Menu |--------------------------")
+        print("=================================================================")
+        print("1: Closing price of all 5 sample stcks.")
+        print("2: Compare closing price with average and previous closing price.")
+        print("3: Volume sold out graph and Raito.")
+        print("4: Pair trade between HPQ and INTC.")
+        print("5: Exit program.")
+        print("=================================================================")
+        action = input("Select what analysis graph you want to see.  ")
+        if action.isdigit() == False:
+            print("invalid input.")
+            continue
+        action = int(action)
+        if action < 1 or action > 5:
+            print("invalid action.")
+        if action == 1:
+            part1()
+        elif action == 2:
+            part1_2(data)
+        elif action == 3:
+            part2(data)
+        elif action == 4:
+            part3(data)
+        elif action == 5:
+            break
 
-
-def part1(data):
-    """analysis by closing price"""
+def part1():
+    """plot closing price x_axis as date and y_aixs as closing price"""
     apple = pdr.get_data_yahoo("AAPL", start = datetime.datetime(2018, 5, 20)\
         , end = datetime.datetime ( 2018, 11, 20))
     hp = pdr.get_data_yahoo("HPQ", start = datetime.datetime(2018, 5, 20)\
@@ -51,6 +80,7 @@ def part1(data):
         , end = datetime.datetime ( 2018, 11, 20))
     google = pdr.get_data_yahoo("GOOG", start = datetime.datetime(2018, 5, 20)\
         , end = datetime.datetime ( 2018, 11, 20))
+    #get data from yahoo finance
 
     apple.plot(y='Close')
     hp.plot(y='Close')
@@ -58,9 +88,10 @@ def part1(data):
     microsoft.plot(y='Close')
     google.plot(y='Close')
     plt.show()
+    #plot 5 graph
 
 def bar_data_part1_2(index, data, more_previous, less_previous, high_avg, below_avg, mean):
-    """collect data for bar"""
+    """collect data for bar inpart 1.2"""
     present_data = 0
     for i in data[index]:
         if present_data <= float(i[4]):
@@ -68,15 +99,17 @@ def bar_data_part1_2(index, data, more_previous, less_previous, high_avg, below_
         else:
             less_previous[index] += 1
         present_data = float(i[4])
+    #if current data > yesterday will count in more_previous else in less_previous
 
         if mean <= float(i[4]):
             high_avg[index] += 1
         else:
             below_avg[index] += 1
+    #if current data higher than mean wil count in high_avg else below_avg
     return more_previous, less_previous, high_avg, below_avg
 
 def part1_2(data):
-    """analysis closing average x 128 days"""
+    """analysis by closing price to see which one have good grow."""
     x_axis = [i for i in range(len(data[0]))]
     y_apple, y_hp, y_intel, y_microsoft, y_google = [], [], [], [], []
     for j in range(len(data[0])):
@@ -85,15 +118,18 @@ def part1_2(data):
         y_intel.append(float(data[2][j][4]))
         y_microsoft.append(float(data[3][j][4]))
         y_google.append(float(data[4][j][4]))
+    #prepare x and y_axis
 
     mean1 = sum(y_apple)/128
     mean2 = sum(y_hp)/128
     mean3 = sum(y_intel)/128
     mean4 = sum(y_microsoft)/128
     mean5 = sum(y_google)/128
+    #find closing price's mean of all 5 sample stocks.
 
     high_avg, below_avg = [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]
     more_previous, less_previous =[0, 0, 0, 0, 0], [0, 0, 0, 0, 0]
+    #prepare data for plot graph
 
 
     more_previous, less_previous, high_avg, below_avg = \
@@ -106,7 +142,7 @@ def part1_2(data):
     bar_data_part1_2(3, data, more_previous, less_previous, high_avg, below_avg, mean4)
     more_previous, less_previous, high_avg, below_avg = \
     bar_data_part1_2(4, data, more_previous, less_previous, high_avg, below_avg, mean5)
-
+    #get data for plot graph
 
     x_list = np.arange(1,18) 
     x_list = np.array([10, 30, 50, 70, 90])
@@ -121,7 +157,9 @@ def part1_2(data):
     plt.bar(x_list + 2, high_avg, color="green", width=3, align="center", label="higher average.")
     plt.bar(x_list + 5, below_avg, color="orange", width=3, align="center", label="belowe average.")
     plt.legend()
+    #ploting bar graph compare avg and previous value.
 
+    #ploting closing price graph of all 5 sample stocks by 128 day and their mean
     fig_apple = plt.figure()
     fig_hp = plt.figure()
     fig_intel = plt.figure()
@@ -172,9 +210,10 @@ def part1_2(data):
 
 
 def part2(data):
-    """analysis by volume"""
+    """ploting bar graph of all 5 sample stock by volume sold out in range"""
     y_apple = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     x_list = np.arange(1,10)
+    #preparing data
     for i in data[0]:
         if 10000 <= int(i[6])/1000 < 20000:
             y_apple[0] += 1
@@ -200,7 +239,7 @@ def part2(data):
     plt.xlabel("volume sold. [10 million unit.]", fontsize=10)
     plt.xticks(x_list, range_x)
     plt.bar(x_list,y_apple, color="red")
-
+    plt.show()
 
     y_hp = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     x_list2 = np.arange(1,10)
@@ -229,6 +268,7 @@ def part2(data):
     plt.xlabel("volume sold. [1 million unit.]", fontsize=17)
     plt.xticks(x_list2, range_x)
     plt.bar(x_list2, y_hp, color="orange")
+    plt.show()
 
     y_intel = [0, 0, 0, 0, 0, 0]
     x_list3 = np.arange(1,7)
@@ -251,6 +291,7 @@ def part2(data):
     plt.xlabel("volume sold. [10 million unit.]", fontsize=17)
     plt.xticks(x_list3, range_x)
     plt.bar(x_list3, y_intel, color="green")
+    plt.show()
 
     y_microsoft = [0, 0, 0, 0, 0, 0]
     x_list4 = np.arange(1,7)
@@ -302,21 +343,23 @@ def part2(data):
     plt.xlabel("volume sold. [1 million unit.]", fontsize=17)
     plt.xticks(x_list5, range_x)
     plt.bar(x_list5, y_google, color="purple")
+    plt.show()
 
     x = [0, 0, 0, 0, 0]
 
-    for i in range(len(apple)):
-        x[0] += int(apple[i][6])
-        x[1] += int(hp[i][6])
-        x[2] += int(intel[i][6])
-        x[3] += int(microsoft[i][6])
-        x[4] += int(google[i][6])
+    for i in range(len(data[0])):
+        x[0] += int(data[0][i][6])
+        x[1] += int(data[1][i][6])
+        x[2] += int(data[2][i][6])
+        x[3] += int(data[3][i][6])
+        x[4] += int(data[4][i][6])
     labels = ["AAPL", "HPQ", "INTC", "MSFT", "GOOG"]
     plt.figure(figsize=[7,7])
     plt.pie(x,autopct='%d%%', counterclock=0, startangle=90, labels=labels)
+    plt.show()
 
 def part3(data):
-    """pair trade HPQ and INTC"""
+    """pair trade between HPQ and INTC"""
 
     x_axis = [i for i in range(len(data[0]))]
     y_hp, y_intel = [], []
@@ -325,6 +368,7 @@ def part3(data):
         y_hp.append(float(data[1][j][5]))
         y_intel.append(float(data[2][j][5]))
         y_diff.append(float(data[2][j][5]) - float(data[1][j][5]))
+    #prepare data for adj close of 2 stocks and their different
 
     ax1 = plt.gca()
     ax1.set_title("HPQ and INTC adj. close price.\nDate: 20/5/2018 - 20/11/2018. [128 days]")
@@ -337,14 +381,18 @@ def part3(data):
     ax2.set_ylabel("Difference between INTC and HPQ.")
     ax2.plot(x_axis, y_diff, color="black", label="difference")
     ax2.legend(loc=5)
-
     plt.show()
+    #ploting graph of HPQ and INTC Adj. close 
+    #Y(left) = adj close
+    #Y(right) = difference
+    #X = day
 
     y_diff_float = []
     for i in y_diff:
         y_diff_float.append(i)
     for i in range(len(y_diff)):
         y_diff[i] = int(y_diff[i])
+    #changing somee float data into int for easy ploting bar and for analysis
 
     x_list = np.arange(19,34)
     y_list = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -357,11 +405,13 @@ def part3(data):
     plt.xlabel("Difference")
     plt.bar(x_list, y_list, color="purple", width=1)
     plt.show()
-
+    #ploting bar graph to count how many time 2 stock have what difference
+    #Y = Counting
+    #X = Value difference
 
     mean = int(statistics.mean(y_diff))
     std = int(statistics.pstdev(y_diff))
-    print(mean, std)
+    #find mean and std of difference
 
     ax3 = plt.gca()
     ax3.set_title("Adj close difference between INTC and HPQ")
@@ -373,5 +423,6 @@ def part3(data):
     ax3.plot(x_axis, y_diff_float, color="purple", label="difference")
     ax3.legend()
     plt.show()
+    #ploting difference graph with mean and std+1 std-1
 
 main()
