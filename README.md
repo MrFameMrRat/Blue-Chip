@@ -21,9 +21,8 @@
 ข้อมูลที่ผ่านการประมวลผลแล้วจะถูกจัดเก็บเป็น Dictionary และถูกบันทึกลงบน Local Storage ด้วย Pickle หลังจากนั้นข้อมูลถูกนำมาแสดงผลเป็นกราฟผ่าน graph.py
 
 ## ผลลัพธ์
-ผลลัพธ์งานวิจัยได้ถูกแสดงไว้บนเว็บไซต์ของเรา
- .....
- link youtube
+ผลลัพธ์งานวิจัยได้ถูกแสดงไว้บนเว็บไซต์ของเรา https://www.it.kmitl.ac.th/~it61070210/PSIT/Blue%20Chip.html
+link youtube
 
 Made with love
 Blue Chip Team
