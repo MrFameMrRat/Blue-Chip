@@ -24,6 +24,6 @@
 
 ## ผลลัพธ์
 ผลลัพธ์งานวิจัยได้ถูกแสดงไว้บนเว็บไซต์ของเรา https://www.it.kmitl.ac.th/~it61070210/PSIT/Blue%20Chip.html
-link youtube
+link Youtube : https://www.youtube.com/watch?v=0W131bBv1ag&t=410s
 
 Blue Chip Team
