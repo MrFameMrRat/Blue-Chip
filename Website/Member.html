@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>MEMBER</title>
+    <link rel="icon" href="http://icons.iconarchive.com/icons/iynque/ios7-style/1024/Stocks-icon.png" sizes="32x32" />
+    <link rel="stylesheet" href="Blue Chip.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <style>
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+
+        .fa-github {
+            background: black;
+            color: white;
+        }
+
+        .circle {
+            /* ชื่อคลาสต้องตรงกับ <img class="circle"... */
+            height: 200px;
+            /* ความสูงปรับให้เป็นออโต้ */
+            width: 200px;
+            /* ความสูงปรับให้เป็นออโต้ */
+            border: 3px solid #fff;
+            /* เส้นขอบขนาด 3px solid: เส้น #fff:โค้ดสีขาว */
+            border-radius: 50%;
+            /* ปรับเป็น 50% คือความโค้งของเส้นขอบ*/
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            /* เงาของรูป */
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+
+        #myBtn:hover {
+            background-color: #555;
+        }
+
+    </style>
+</head>
+
+
+
+<body>
+    <header>
+        <nav>
+            <h1>MEMBER</h1>
+            <ul id="bar">
+                <li><a class="home" href="Blue Chip.html">HOME</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="man"></div><br><br><br>
+    <!-- Team -->
+
+
+    <center>
+        <img class="circle" src="images/get.jpg" width="120" height="120" />
+        <h3>นาย นราวิชญ์ พัทรพันธ์ รหัสนักศึกษา 61070099</h3>
+    </center>
+    <!-- Add font awesome icons -->
+    <center>
+        <a href="https://web.facebook.com/narawich.phattaraphan" class="fa fa-facebook"></a>
+        <a href="https://github.com/Narawich" class="fa fa-github"></a>
+        <a href="https://www.linkedin.com/in/narawich-phattaraphan-b85271170/" class="fa fa-linkedin"></a>
+    </center>
+    <br><br><br>
+    <center>
+        <img class="circle" src="images/fame.jpg" width="120" height="120" />
+        <h3>นาย ภูริณัฐ จิตมนัส รหัสนักศึกษา 61070171</h3>
+    </center>
+    <!-- Add font awesome icons -->
+    <center>
+        <a href="https://web.facebook.com/FameMrRat" class="fa fa-facebook"></a>
+        <a href="https://github.com/MrFameMrRat" class="fa fa-github"></a>
+        <a href="https://www.linkedin.com/in/purinut-jitmanas-44a175170/" class="fa fa-linkedin"></a>
+    </center>
+    <br><br><br>
+    <center>
+        <img class="circle" src="images/bom.jpg" width="120" height="120" />
+        <h3>นาย วัฒนวิทย์ มิ่งเชื้อ รหัสนักศึกษา 61070205</h3>
+    </center>
+    <!-- Add font awesome icons -->
+    <center>
+        <a href="https://web.facebook.com/Watthanawit7492" class="fa fa-facebook"></a>
+        <a href="https://github.com/Watthanawit" class="fa fa-github"></a>
+        <a href="https://www.linkedin.com/in/watthanawit-mingchuea-16a160170/" class="fa fa-linkedin"></a>
+    </center>
+    <br><br><br>
+    <center>
+        <img class="circle" src="images/min.jpg" width="120" height="120" />
+        <h3>นาย วิศรุต แก้วงาม รหัสนักศึกษา 61070210</h3>
+    </center>
+    <!-- Add font awesome icons -->
+    <center>
+        <a href="https://web.facebook.com/witsarut.keawngam" class="fa fa-facebook"></a>
+        <a href="https://github.com/Minwitsarut" class="fa fa-github"></a>
+        <a href="https://www.linkedin.com/in/witsarut-kaewngam-911175170/" class="fa fa-linkedin"></a>
+    </center>
+    <!-- Scroll Top -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script>
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+
+</html>

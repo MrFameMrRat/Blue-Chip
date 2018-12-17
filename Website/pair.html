@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>PAIR</title>
+    <link rel="icon" href="http://icons.iconarchive.com/icons/iynque/ios7-style/1024/Stocks-icon.png" sizes="32x32" />
+    <link rel="stylesheet" href="pair.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>PAIR</h1>
+            <ul id="bar">
+                <li><a class="home" href="Blue Chip.html">HOME</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="man"></div>
+    <!-- Overview -->
+    <!-- PART I -->
+    <center>
+        <!-- Header -->
+
+        <!-- Images -->
+        <h1>Pair trade</h1>
+        <p><h4>Pair trade คือการ ซื้อ-ขายระหว่างหุ้น 2 ตัว<br>
+            โดยสังเกตความแตกต่างระหว่าง Adj. close ของหุ้นทั้ง 2 ตัว <br>
+            เช่น หุ้น A และ B หากความแตกต่างๆถึงจุดๆหนึ่งให้ ขายหุ้น A และ ซื้อหุ้น B <br>
+            และหากความแตกต่างๆถึงจุดอีกจุดหนึ่งให้ ขายหุ้น B ซื้อหุ้น A</h4></p>
+        <div class="images">
+            <img src="images/diff.jpg">
+            <div class="text">
+                <h2>กราฟ adj.close แลละ diff ของ HPQ และ INTC</h2>
+                <p><h4>หุ้นตัวอย่างที่จะนำมาทำ pair trade คือ หุ้น HPQ และ INTC <br>
+                    โดยสังเกตจาก adj close ของทั้ง 2 ตัวและหาค่าความแตกต่างของ adj close ได้ดังกราฟข้างต้น</h4></p>
+            </div>
+        </div>
+        <hr>
+        <div class="images">
+            <img src="images/amout_diff.jpg">
+            <div class="text">
+                <p><h4>เมื่อได้ ค่าความแตกต่างมาแล้วก็วาดแผนภูมิแท่ง<br>
+                    หาปริมาณความแตกต่างของแต่ละช่วงว่ามีค่าความแตกต่างที่จุดๆหนึ่งกี่ครั้ง<br>
+                     เพื่อหาค่า เฉลี่ย และส่วนเบียงเบนมาตรฐานของแผนภูมิแท่ง</h4></p>
+            </div>
+        </div>
+        <hr>
+        <div class="images">
+            <img src="images/clue.jpg">
+            <div class="text">
+                <p><h4>จากกราฟจะได้ผลสรุปว่าที่ จุด std+1 หรือ มีค่าความแตกต่างที่ประมาณ 27 dollar<br>
+                    ให้ขาย INTC และซื้อ HPQ และในทางกลับกัน<br>
+                     ที่จุด std-1 หรือมีค่าความแตกต่างที่ประมาณ 21 dollar ให้ซื้อ INTC และขาย HPQ</h4></p>
+            </div>
+        </div>
+    </center>
+<!-- Scroll Top -->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
+</body>
+
+</html>

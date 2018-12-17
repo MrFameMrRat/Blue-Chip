@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+}
+header {
+    background: black;
+    color: white;
+    padding: 8px 0px 6px 40px;
+    height: 40px;
+}
+header h1 {
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    float: left;
+    margin-top: 0px;
+    margin-right: 10px;
+}
+nav ul {
+    display: inline;
+    padding: 0px;
+    float: left;
+}
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    color: white;
+    float: left;
+    margin-left: 12px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+#bar {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.home {
+    background-color: red;
+    padding: 30px 10px 13px 10px;
+}
+.man {
+    background-color: red;
+    height: 5px;
+}
+.stock:hover {
+    background-color: blue;
+    padding: 30px 10px 13px 10px;
+}
+.logo {
+    background-image: url(images/02.jpg);
+    width: 1536px;
+    height: 805px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+.change1 {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 9% 5% 0% 55%;
+    font-size: 30px;
+    color: brown;
+
+}
+.change2 {
+    font-family: sans-serif;
+    margin: 0.5% 0% 0% 55%;
+    font-size: 75px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: inline-block;
+}
+.change3 {
+    font-family: sans-serif;
+    margin: 0% 0% 0% 55%;
+    font-size: 64px;
+    color: black;
+    display: inline-block;
+}
+.botton {
+    margin: 0% 0% 0% 55%;
+    background: yellow;
+    color: black;
+    border: none;
+    height: 50px;
+    font-size: 1.4em;
+    padding: 0 1em;
+    cursor: pointer;
+    outline: none;
+    font-family: sans-serif;
+    font-weight: 900;
+}
+.click {
+    margin: 0% 0% 0% 55%;
+    background: skyblue;
+    color: black;
+    border: none;
+    height: 50px;
+    font-size: 1.4em;
+    padding: 0 1em;
+    cursor: pointer;
+    outline: none;
+    font-family: sans-serif;
+    font-weight: 900;
+}

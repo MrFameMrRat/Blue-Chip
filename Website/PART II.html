@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PART II</title>
+    <link rel="icon" href="http://icons.iconarchive.com/icons/iynque/ios7-style/1024/Stocks-icon.png" sizes="32x32" />
+    <link rel="stylesheet" href="part2.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+</head>
+
+<body>
+    <header>
+        <!-- Navigation -->
+        <nav>
+            <h1>PART II</h1>
+            <ul id="bar">
+                <li><a class="home" href="Blue Chip.html">HOME</a></li>
+                <li><a class="stock" href="PART I.html">PART I</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="man"></div>
+    <!-- Overview -->
+    <!-- PART I -->
+    <center>
+        <!-- Header -->
+
+        <!-- Images -->
+        <div class="w3-content" style="max-width:800px">
+            <img class="mySlides" src="images/Summary.png" style="width:100%">
+            <img class="mySlides" src="images/APPLE.jpg" style="width:100%">
+            <img class="mySlides" src="images/GOOGLE.jpg" style="width:100%">
+            <img class="mySlides" src="images/HP.jpg" style="width:100%">
+            <img class="mySlides" src="images/INTEL.jpg" style="width:100%">
+            <img class="mySlides" src="images/MSFT.jpg" style="width:100%">
+        </div>
+        <!-- Button -->
+        <div class="w3-center">
+            <div class="w3-section">
+                <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">
+                    < Prev</button> <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next >
+                </button>
+            </div>
+        </div>
+        <!-- Slide Images -->
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function currentDiv(n) {
+                showDivs(slideIndex = n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                if (n > x.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = x.length }
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" w3-red", "");
+                }
+                x[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " w3-red";
+            }
+        </script>
+    </center>
+    <hr>
+    <table border="2" bordercolor="white" width="60%" align="center">
+        <td>
+            <h4>
+                &nbsp&nbsp&nbsp เป็นการวิเคราะห์จาก volume
+                ที่ขายออกในแต่ละวันเพื่อหาว่าหุ้นของบริษัทไหนเป็นที่นิยมมากที่สุดและจัดอันดับได้ดังนี้
+            </h4>
+        </td>
+        <tr>
+            <td>
+                <h4>
+                    *คิดเป็น % จากหุ้นรวมที่ขายออกทั้งหมดจากหุ้นตัวอย่างในช่วงวันที่ 20/5/2018-20/11/2018
+                </h4>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <ol>
+                    <li>
+                        <h4>
+                            Apple คิดเป็น 31%
+                        </h4>
+                    </li>
+                    <li>
+                        <h4>
+                            Microsoft คิดเป็น 29%
+                        </h4>
+                    </li>
+                    <li>
+                        <h4>
+                            Intel คิดเป็น 27%
+                        </h4>
+                    </li>
+                    <li>
+                        <h4>
+                            HP คิดเป็น 9%
+                        </h4>
+                    </li>
+                    <li>
+                        <h4>
+                            Google คิดเป็น 4%
+                        </h4>
+                    </li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>
+                    โดยจากกราฟจะสังเกตได้ว่า หุ้น 3 อันดับแรก ปริมาณที่ขายออกต่อวันอยู่ที่หลัก 10 ล้านหน่วย และ 2
+                    อันดับสุดท้ายอยู่ที่หลัก ล้านหน่วย
+                </h4>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>
+                    ทำไมหุ้น AAPL และ MSFT ถึงสูง?
+                </h3>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>
+                    &nbsp&nbsp&nbsp เพราะ บริษัทผลิตภัณฑ์ของ บริษัท apple เป็นที่นิยมของคนในปัจจุบันเป็นอย่างมาก
+                    ยกตัวอย่างเช่น
+                    iPhone iPad Mac TV Music และมีในส่วนของเทคโนโลยีที่ถือว่าทันสมัยอย่าง apple watch
+                    จึงถือว่าเป็นบริษัทที่สามารถขายของออกได้มากเลยทีเดียว
+                </h4>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>
+                    &nbsp&nbsp&nbsp ส่วน MSFT ซึ่งถือว่าเป็นเจ้าพ่อ เทคโนโลยีอยู่แล้วยิ่งคอมพิวเตอร์ทั่วไปที่ใช้ Window
+                    ซึ่งเป็นผลิตภัณฑ์หลักซึ่งเข้าถึงผู้ใช้ทุกรูปแบบ ทั้งส่วนตัว และ ธุรกิจองค์กร
+                    Microsoft ยังมีผลิตภัณฑ์อื่นๆเช่น X-box และเป็นเจ้าของ Github ในปัจจุบันด้วยทำให้สายธุรกิจของ
+                    Microsoft แผ่ไปในวงกว้างอย่างมากและเป็นเหตุผลว่าทำไม หุ้น MSFT ถึงได้รับความนิยมพอๆกับ Apple
+                </h4>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>
+                    &nbsp&nbsp&nbsp Intel ซึ่งมาเป็นอันดับที่ 3 เนื่องจาก intel เป็นบริษัทผลิต
+                    ชิพสารกึ่งตัวนำที่ใหญ่ที่สุดในโลก และเป็นผู้คิด ไมโครโปรเซสเซอร์ x86
+                    ที่ใช้กันอยู่มากที่สุดในคอมพิวเตอร์ส่วนบุคคลพูดง่ายๆก็คือ
+                    ยิ่งคอมพิวเตอร์ส่วนบุคคลได้รับความนิยมมากเท่าไร Intel ก็ขายผลิตภัณฑ์ได้มากยิ่งขึ้นเท่านั้น แต่จาก
+                    Part1 ที่อัตราหุ้นที่ต่ำกว่าวันก่อนหน้า และ ต่ำกว่าค่าเฉลี่ย Intel ถือว่าเยอะที่สุดเป็นอันดับ 1
+                    ก็เพราะในรอบ 6 เดือนที่ผ่านมา Intel มีปัญหาด้านข้อมูล และช่องโหว่ในตัวอุปกรณ์
+                    และปัญหาของบุคคลภายในองค์กรทำให้หุ้นของ Intel
+                    ทำกำไรได้น้อยกว่าบริษัทอื่นๆแต่ก็ยังถือว่าได้รับความนิยมอยู่ดี
+                </h4>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>
+                    &nbsp&nbsp&nbsp HP ซึ่งมีความนิยมเป็นอันดับ 4 ซึ่งถือว่าน้อยกว่า อันดับ 1-3 เป็นอย่างมาก เนื่องจาก
+                    ผลิตภัณฑ์ของ HP ซึ่งเกี่ยวกับอุปกรณ์คอมพิวเตอร์ทั่วไปมีคู่แข่งอยู่พอสมควร เช่น Dell, Lenovo
+                    ทำให้เกิดการเปรียบเทียบด้านผลิตภัณฑ์ซึ่งโดยภาพรวมแล้ว HP มีราคาถูกแต่ก็มีปัญหาด้านอื่นๆ เช่น
+                    อายุการใช้งานเป็นต้นถ้าเกิดการพังในระยะประกัน คู่แข่งอย่าง Dell
+                    ก็มีจุดขายด้านประกันที่ดีเยี่ยมทำให้ HP ดูด้อยในจุดนี้ลงไปอีก ทำให้ราคาหุ้นของ HP
+                    ต่ำอยู่พอสมควรและอาจไม่คุ้มค่าแก่การลงทุนมากนักทำให้หุ้น HP มีความนิยมเป็นอันดับที่ 4
+                </h4>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>
+                    &nbsp&nbsp&nbsp หุ้น google ซึ่งมาเป็นอันดับสุดท้ายซึ่งถือว่าได้รับความนิยมต่ำที่สุด
+                    เหตุผลแรกอาจมาจากราคาต่อหุ้นของ google ซึ่งสูงถึง 1000 ดอลลาร์เทียบกับ Apple และ Microsoft
+                    ซึ่งราคาอยู่ที่ประมาณ 100 และ 200 ดอลลาร์เท่านั้น อีกทั้งผลิตภัณฑ์ก็ไม่ได้หวือหวาเท่าไร เทียบกับ
+                    Apple แล้วทำให้มีคู่แข่งด้านผลิตภัณฑ์อยู่เหมือนกัน ส่วนในรอบ 6 เดือนนี้ บริษัท google
+                    มีปัญหาอยู่บ่อยครั้งยิ่งช่วงเดือน ตุลาคมที่พบว่าเกิดการปิดข่าวการเด้งพนักงานจากการคุกคามทางเพศ
+                    และยังเป็นผู้ผลิตแอนดรอยด์ด้วย ทำให้เกิดกระแสด้านลบต่อ Google
+                    พอสมควรทำให้ราคาหุ้นตกลงเป็นอย่างมากในหลัก 100 ดอลลาร์ถือว่าขาดทุนมากที่สุดใน 5
+                    หุ้นตัวอย่างหากคิดจะลงทุน จึงเป็นสาเหตุให้หุ้น Google
+                    เป็นหุ้นตัวอย่างที่คนนิยมมากที่สุดอยู่เป็นอันดับสุดท้าย
+                </h4>
+            </td>
+        </tr>
+    </table>
+
+
+
+
+    <!-- Scroll Top -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script>
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+
+</html>

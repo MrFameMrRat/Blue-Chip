@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PART I</title>
+    <link rel="icon" href="http://icons.iconarchive.com/icons/iynque/ios7-style/1024/Stocks-icon.png" sizes="32x32" />
+    <link rel="stylesheet" href="part1.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <!-- Navigation -->
+        <nav>
+            <h1>PART I</h1>
+            <ul id="bar">
+                <li><a class="home" href="Blue Chip.html">HOME</a></li>
+                <li><a class="stock" href="PART II.html">PART II</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="man"></div>
+    <!-- Overview -->
+    <!-- PART I -->
+    <center>
+        <!-- Header -->
+        <div class="w3-container">
+            <h2><strong>ข้อมูล</strong></h2>
+    </center>
+    <hr>
+    <table border="1" bordercolor="white" width="50%" align="center">
+        <td>
+            <h4>หุ้นที่นำมาวิเคราะห์เป็นหุ้นจาก บริษัท คือ</h4>
+        </td>
+        <tr>
+            <td>
+                <ol>
+                    <li>
+                        <h4>AAPL. [Apple Inc.]</h4>
+                    </li>
+                    <li>
+                        <h4>GOOG [Google]</h4>
+                    </li>
+                    <li>
+                        <h4>HPQ [HP Inc.]</h4>
+                    </li>
+                    <li>
+                        <h4>INTC [Intel corporation]</h4>
+                    </li>
+                    <li>
+                        <h4>MSFT [Microsoft corporation]</h4>
+                    </li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>โดย เป็นข้อมูลในช่วงเวลา 6 เดือนตั้งแต่วันที่ 20/5/2018 – 20/11/2018 รวมเป็นเวลาทั้งสิ้น 128 วัน
+                    [ตลาดหุ้น ปิด เสาร์-อาทิตย์]</h4>
+            </td>
+        </tr>
+    </table>
+
+
+    <center>
+        </div>
+        <!-- Images -->
+        <div class="w3-content" style="max-width:800px">
+            <img class="mySlides" src="images/close_apple.jpg" style="width:100%">
+            <img class="mySlides" src="images/close_google.jpg" style="width:100%">
+            <img class="mySlides" src="images/close_hp.jpg" style="width:100%">
+            <img class="mySlides" src="images/close_intel.jpg" style="width:100%">
+            <img class="mySlides" src="images/close_microsoft.jpg" style="width:100%">
+        </div>
+        <!-- Button -->
+        <div class="w3-center">
+            <div class="w3-section">
+                <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">
+                    < Prev</button> <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next >
+                </button>
+            </div>
+        </div>
+        <!-- Slide Images -->
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function currentDiv(n) {
+                showDivs(slideIndex = n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                if (n > x.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = x.length }
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" w3-red", "");
+                }
+                x[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " w3-red";
+            }
+        </script>
+    </center>
+    <center>
+        <h3>เหตุการณ์ที่ทำให้หุ้นขึ้น</h3>
+        <table border="2" bordercolor="black" width="50%" align="center">
+            <tr align="center">
+                <td width="15%">
+                    <h4>02/08/2018</h4>
+                </td>
+                <td align="left">
+                    <h4>&nbsp&nbsp Apple รายได้ถึง 1 พันล้านดอลลาร์สหรัฐ</h4>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <h4>13/09/2018
+                </td>
+                <td align="left">
+                    <h4>&nbsp&nbsp Apple เปิดตัวชิปประมวลผลใหม่ A12 BIONIC</h4>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <h4>30/05/2018</h4>
+                </td>
+                <td align="left">
+                    <h4>&nbsp&nbsp HP เปิดตัว Laptop เกมมิ่งขนาดเล็กที่มาพร้อมกับ CPU Gen 8th</h4>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <h4>05/09/2018</h4>
+                </td>
+                <td align="left">
+                    <h4>&nbsp&nbsp HP เปิดตัวสินค้าใหม่สำหรับสาย Work Station</h4>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <h4>05/07/2018</h4>
+                </td>
+                <td align="left">
+                    <h4>&nbsp&nbsp Google คิดค้นเครื่องมือสำหรับตรวจสอบ PC ที่จุดปลายทาง</h4>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <h4>5/07/2018</h4>
+                </td>
+                <td align="left">
+                    <h4>&nbsp&nbsp ฟังก์ชั่น Google Cloud ในสถานะของบริการ GA สำหรับ Cloud Server แบบไม่ใช้ Serverless
+                        และ
+                        Google เปิดตัวบริการ Cloud สร้างบริการที่ช่วย CI / CD บนระบบคลาวด์</h4>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <h4>30/07/2018</h4>
+                </td>
+                <td align="left">
+                    <h4>&nbsp&nbsp Intel เปิดตัว CPU i9-9900k ซึ่งเป็น Gen 9th ที่มี 8 core 16 thread</h4>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <h4>17/08/2018</h4>
+                </td>
+                <td align="left">
+                    <h4>&nbsp&nbsp Intel เปิดตัว PC ขนาดเล็กที่มาพร้อมกับ CPU Gen 8 พร้อมทั้ง VGA Lris</h4>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <h4>04/06/2018</h4>
+                </td>
+                <td align="left">
+                    <h4>&nbsp&nbsp Microsoft เข้าซื้อ Github เป็นจำนวนเงิน 7.5 ล้านดอลลาร์สหรัฐ</h4>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <h4>11/08/2018</h4>
+                </td>
+                <td align="left">
+                    <h4>&nbsp&nbsp Satya Nadella ขายหุ้นของ Microsoft ได้ 30% และได้รับกำไร 1 พันล้านดอลลาร์สหรัฐ</h4>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <h3>เหตุการณ์ที่ทำให้หุ้นลง</h3>
+        <table border="2" bordercolor="black" width="50%" align="center">
+            <tr align="center">
+                <td width="15%">
+                    <h4>19/09/2018</h4>
+                </td>
+                <td align="left">
+                    <h4>&nbsp&nbsp Apple เปิดตัวผลิตภัณฑ์ใหม่คือ iPhone Xs และ iPhone Xs Max</h4>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <h4>24/10/2018</h4>
+                </td>
+                <td align="left">
+                    <h4>&nbsp&nbsp iCloud เกิดการทำงานช้าส่งผลให้ผู้ใช้ไม่สามารถเข้าถึงได้</h4>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <h4>21/06/2018</h4>
+                </td>
+                <td align="left">
+                    <h4>&nbsp&nbsp HP ได้เปิดตัว PC และ Laptop ตัวใหม่เช่น Pavilion x360 และ ENVY x360
+                        ซึ่งมีแบตเตอรี่ที่แย่มาก</h4>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <h4>02/10/2018</h4>
+                </td>
+                <td align="left">
+                    <h4>&nbsp&nbsp HP เปิดตัวแบตเตอรี่ Spectre Folio 2 in 1 ที่มีอายุการใช้งานแบตเตอรี่ 18 ชั่วโมง
+                        แต่ความเป็นจริงสามารถอยู่ได้เพียง 10 ชั่วโมงเท่านั้น</h4>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <h4>04/06/2018</h4>
+                </td>
+                <td align="left">
+                    <h4>&nbsp&nbsp Google ไม่ต่ออายุสัญญากับกระทรวงกลาโหมหลังจากการประท้วงของพนักงาน</h4>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <h4>27/10/2018</h4>
+                </td>
+                <td align="left">
+                    <h4>&nbsp&nbsp Google ได้ไล่ออกบุคลากรจำนวน 48 คนที่ล่วงละเมิดทางเพศซึ่งรวมถึงนักพัฒนาแอนดรอยด์</h4>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <h4>15/06/2018</h4>
+                </td>
+                <td align="left">
+                    <h4>&nbsp&nbsp Intel พบข้อผิดพลาดใน Intel CPU Spectre ซึ่งสามารถอ่านค่าตัวแปรในโปรเซสเซอร์อื่นได้</h4>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <h4>21/06/2018</h4>
+                </td>
+                <td align="left">
+                    <h4>&nbsp&nbsp Brian Krzanich CEO ของ Intel ลาออกหลังจากมีปัญหาทางเพศกับพนักงาน</h4>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <h4>08/10/2018</h4>
+                </td>
+                <td align="left">
+                    <h4>&nbsp&nbsp Intel เปิดตัว CPU Core 9th Gen นั่นคือ Core i9-9900k 5GHz</h4>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <h4>16/10/2018</h4>
+                </td>
+                <td align="left">
+                    <h4>&nbsp&nbsp Paul Allen ผู้ก่อตั้ง Microsoft เสียชีวิตด้วยวัย 65 ปี</h4>
+                </td>
+            </tr>
+        </table><br>
+        <table border="2" bordercolor="white" width="50%" align="center">
+            <tr>
+                <td>
+                    <h4>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp หุ้นทุกตัวเกี่ยวกับเทคโนโลยี
+                        โดยจากกราฟสังเกตได้ว่าเหตุการณ์ที่ทำให้หุ้นขึ้นนั้นส่วนใหญ่เกิดจากการเปิดตัวผลิตภัณฑ์ใหม่ซึ่งทำให้บริษัทนั้นเป็นกระแสนิยมในช่วงนั้นทันที
+                        ซึ่งส่วนใหญ่จะสังเกตได้ว่า จะเป็นช่วงต้นเดือนอีกด้วย ดังนั้น
+                        ช่วงต้นเดือนและช่วงที่ออกผลิตภัณฑ์ใหม่เป็นช่วงที่หุ้นขึ้นมากที่สุดและอาจตกลงมาในทันที่ถ้าผลิตภัณฑ์ที่ออกมาใหม่ด้อยประสิทธิภาพไม่เหมือนที่โฆษณาไว้
+                    </h4>
+                </td>
+            </tr><br>
+            <tr>
+                <td>
+                    <h4>&nbsp&nbsp&nbsp&nbsp&nbsp ส่วนเหตุการณ์อื่นๆที่เกิดจากปัญหาทั้งวงในของบริษัท เช่น
+                        ข่าวด้านช่องโหว่ของข้อมูลหรืออุปกรณ์ที่ส่งผลกระทบต่อผู้ใช้
+                        รวมทั้งการสูญเสียของบุคคลสำคัญในบริษัท
+                        การปรับเปลี่ยนตำแหน่งผู้บริหาร การประท้วงของเหล่าลูกจ้าง ล้วนส่งผลให้หุ้นตกลงอย่างชัดเจน
+                    </h4>
+                </td>
+            </tr><br>
+            <tr>
+                <td>
+                    <h4>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp โดยจากทิศทางการขึ้น-ลงของหุ้นนั้น ส่วนใหญ่ เวลาขึ้นก็มีจุดที่เตรียมตก
+                        และในทางกลับกัน
+                        เมื่อหุ้นตกจะมีช่วงที่กราฟจะเงยหน้าขึ้น เป็นสัญญาณที่ดีว่าหุ้นกำลังจะฟื้นตัวและขึ้นในไม่ช้า
+                        ให้ใช้ข่าว ประกอบการตัดสินใจในการซื้อหุ้นในช่วงนั้นจะทำให้มีโอกาสได้กำไรสูง
+                    </h4>
+                </td>
+            </tr><br>
+            <tr>
+                <td>
+                    <h4>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp ดังนั้น
+                        ถ้ามีข่าวในด้านที่ไม่ดีก็ควรขายหุ้นไปก่อนเพื่อเตรียมซื้อใหม่ตอนที่หุ้นกำลังปรับสภาพขึ้น
+                        แต่อย่างไรก็ตามต้องติดตามข่าวสารของบริษัทนั้นๆในการประกอบการตัดสินใจอีกหนึ่งทางด้วย
+                    </h4>
+                </td>
+            </tr>
+        </table>
+    </center>
+    <hr>
+
+
+
+
+
+    <!-- HEADER -->
+    <!-- PART II-->
+
+
+
+
+    <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="images/moveup_apple.jpg" style="width:100%;">
+                </div>
+
+                <div class="item">
+                    <img src="images/moveup_google.jpg" style="width:100%;">
+                </div>
+
+                <div class="item">
+                    <img src="images/moveup_hp.jpg " style="width:100%;">
+                </div>
+                <div class="item">
+                    <img src="images/moveup_intel.jpg " style="width:100%;">
+                </div>
+                <div class="item">
+                    <img src="images/moveup_microsoft.jpg " style="width:100%;">
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <hr>
+    <center>
+        <img src="images/par1_2_compare.jpg" style="width: 75%">
+        <table border="2" bordercolor="white" width="60%" align="center">
+            <tr>
+                <td>
+                    <h4>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp จากกราฟจะเห็นว่า
+                        บริษัทที่มีจำนวนครั้งของหุ้นที่ขึ้นสูงกว่าวันก่อนหน้า และ
+                        หุ้นที่อยู่สูงกว่าค่าเฉลี่ยคือ หุ้นของ บริษัท Apple และ Microsoft
+                        โดยจะสรุปได้ว่า หุ้น Apple และ
+                        Microsoftมีแนวโน้มในการขึ้นสูงและทำกำไรได้มากกว่าหุ้นอื่นๆจากหุ้นตัวอย่าง ซึ่งหุ้น Microsof
+                        มีอัตราที่อยู่สูงกว่าวันก่อนหน้าและ ค่าเฉลี่ยเป็นจำนวนมากที่สุด
+                        จึงนับว่าเป็นหุ้นที่น่าสนใจแก่การลงทุนที่สุดจาก 5 หุ้นตัวอย่าง
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp ต่อมาหุ้น Google
+                        ที่มีจำนวนครั้งที่สูงกว่าค่าเฉลี่ยมากกว่าแต่กลับกันมีจำนวนครั้งที่หุ้นสูงกว่าเมื่อวันก่อนหน้า
+                        จึงสรุปได้ว่า หุ้น Google หากตกมาจากวันก่อนหน้า ถือเป็นเรื่องปกติ
+                        แต่หากตกมาต่ำกว่าเฉลี่ยแล้วนั้นถือเป็นสัญญาณที่ไม่ค่อยดีต้องตัดสินใจในการ ซื้อ-ขายให้ดี
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp หุ้น HP ที่จำนวนครั้งที่หุ้นสูงกว่าวันก่อนหน้ามากกว่าครึ่งแต่
+                        มีจำนวนครั้งมากกว่าค่าเฉลี่ยต่ำกว่าครึ่ง
+                        ซึ่งคือว่าเป็นหุ้นที่ ทรงๆ การที่จะซื้อ-ขายหุ้นนี้ต้องติดตามข่าวสารเป็นพิเศษ
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp สุดท้ายหุ้น Intel
+                        ซึ่งมีทั้งจำนวนครั้งที่หุ้นสูงกว่าวันก่อนหน้าและค่าเฉลี่ย
+                        ต่ำกว่าครึ่งเอามากๆ
+                        จึงถือว่าหุ้น Intel เป็นหุ้นที่มีความเสี่ยงที่สุดจาก 5 หุ้นตัวอย่าง
+                    </h4>
+                </td>
+            </tr>
+        </table>
+    </center>
+
+
+
+
+
+    <!-- Scroll Top -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script>
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+
+</html>
