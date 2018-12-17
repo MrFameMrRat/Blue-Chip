@@ -23,7 +23,7 @@
 ข้อมูลที่ถูกดึงมาใช้ประมวลผลจะเก็บในรูปแบบ list หลังจากนั้นจึงนำมาแสดงผลเป็นกราฟผ่าน graph.py
 
 ## ผลลัพธ์
-ผลลัพธ์งานวิจัยได้ถูกแสดงไว้บนเว็บไซต์ของเรา https://www.it.kmitl.ac.th/~it61070210/PSIT/Blue%20Chip.html
+ผลลัพธ์งานวิจัยได้ถูกแสดงไว้บนเว็บไซต์ของเรา https://www.it.kmitl.ac.th/~it61070210/PSIT/Blue%20Chip.html <br>
 link Youtube : https://www.youtube.com/watch?v=0W131bBv1ag&t=410s
 
 Blue Chip Team
